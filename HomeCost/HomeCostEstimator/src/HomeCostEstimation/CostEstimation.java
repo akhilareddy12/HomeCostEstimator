@@ -14,20 +14,18 @@ public class CostEstimation {
 	public int highstandardandautomated(int area) {
 		return 2500 * area;
 	}*/
-	public int estimate(String materialtype,int area) {
-		if (materialtype == "standard") {
+	public int estimate(int materialtype,int area,boolean isAutomated) {
+		if (materialtype == 0) {
 			return 1200 * area;
 		}
-		if(materialtype == "above standard") {
+		if(materialtype == 1) {
 			return 1500 * area;
 		}
-		if(materialtype == "high standard") {
-			return 1800 * area;
-		}
-		if(materialtype == "high standard and fully automated") {
+		
+		if(materialtype == 2 && isAutomated) {
 			return 2500 * area;
 		}
-		return 0;
+		return 1800  * area;
 	}
 
 }
