@@ -9,7 +9,7 @@ class CostEstimatingTestCase {
 	@Test
 	void test() {
 		CostEstimation test = new CostEstimation();
-		int output = test.estimate("standard",500);
+		int output = test.estimate(0,500,false);
 		assertEquals(600000,output);
 	}
 
